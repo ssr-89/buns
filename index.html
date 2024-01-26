@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Плюшки для вёрстки</title>
+  <link type="image/x-icon" href="Img/favicon.png" rel="shortcut icon">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <div class="container">
+      <nav id="header-nav" class="header__nav nav">
+        <ul class="header__menu header-menu list">
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#accordion">
+              <span class="header-menu__link-text">Accordion</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#tabs">
+              <span class="header-menu__link-text">Tabs</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link link" href="https://ssr-89.github.io/my-lib/folder-tools/tools-swiper.html" target="_blank">
+              <span class="header-menu__link-text">Swiper</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#dragdrop">
+              <span class="header-menu__link-text">Drag &amp;&nbsp;Drop №1</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#dragdroptwo">
+              <span class="header-menu__link-text">Drag &amp;&nbsp;Drop №2</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#burger">
+              <span class="header-menu__link-text">Burger (постоянный)</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#burger-brake">
+              <span class="header-menu__link-text">Burger (условный)</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#bodylock">
+              <span class="header-menu__link-text">bodyLock</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#dialog">
+              <span class="header-menu__link-text">Modal (dialog)</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#modal">
+              <span class="header-menu__link-text">Modal (html, css, js)</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#backdrop">
+              <span class="header-menu__link-text">Закрытие по фону (backdrop)</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#tooltip">
+              <span class="header-menu__link-text">Tooltip</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#newid">
+              <span class="header-menu__link-text">New id</span>
+            </a>
+          </li>
+          <li class="header-menu__item">
+            <a class="header-menu__link js-scroll-link link" href="#">
+              <span class="header-menu__link-text"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__btns">
+        <button id="header-burger" class="header__burger header-burger btn">
+          <span class="header-burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="main">
+    <section id="hero" class="hero">
+      <div class="hero__container">
+        <h1 class="hero__title title">Плюшки для вёрстки</h1>
+      </div>
+    </section>
+    <section id="accordion" class="accordion">
+      <div class="accordion__container">
+        <h2 class="accordion__title title">Accordion</h2>
+        <div id="accord" class="accordion__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div id="accord-html" class="accord__content accord-content">
+            <pre>
+  &lt;div id="accord" class="accordion-other__accord accord"&gt;
+    &lt;h3 class="accord__title title"&gt;HTML&lt;/h3&gt;
+    &lt;div id="tab-1" class="accord__content accord-content"&gt;
+      <i class="comment">&lt;!-- content --&gt;</i>
+    &lt;/div&gt;
+    &lt;h3 class="accord__title title"&gt;CSS&lt;/h3&gt;
+    &lt;div id="tab-2" class="accord__content accord-content"&gt;
+      <i class="comment">&lt;!-- content --&gt;</i>
+    &lt;/div&gt;
+    &lt;h3 class="accord__title title"&gt;JavaScript&lt;/h3&gt;
+    &lt;div id="tab-3" class="accord__content accord-content"&gt;
+      <i class="comment">&lt;!-- content --&gt;</i>
+    &lt;/div&gt;
+  &lt;/div&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div id="accord-css" class="accord__content accord-content">
+            <pre>
+  <i class="comment">/* accordion-other */</i>
+  #accord {
+    max-width: 900px;
+  }
+  .accord__title {
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 0.5em 0.5em 0.5em 0.7em;
+    border-radius: 5px;
+    background-color: rgba(246, 246, 246, 1);
+    font-weight: normal;
+    color: rgba(3, 3, 3, 1.0);
+    transition: background .3s ease-in-out, color .3s ease-in-out;
+  }
+  .accord__title.select-spoller {
+    background-color: rgba(0, 0, 128, 1.0);
+    color: rgba(255, 255, 255, 1.0);
+  }
+  .accord-content {
+    height: 0;
+    overflow: hidden;
+    color: rgba(3, 3, 3, 1.0);
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: height 1s;
+  }
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div id="accord-js" class="accord__content accord-content">
+            <pre>
+const accordOther = document.getElementById("accord");
+accordOther.addEventListener("click", change);
+function change(event) {
+  const targ = event.target;
+  if (targ.tagName !== "H3") return;
+  if (targ.classList.contains("select-spoller")) {
+    hideAll();
+  } else {
+    hideAll();
+    targ.classList.add("select-spoller");
+    showText(targ.nextElementSibling);
+  }
+}
+function hideAll() {
+  const accordTitle = accordOther.querySelectorAll(".accord__title");
+  const accordContent = accordOther.querySelectorAll(".accord-content");
+  for (let i = 0; i &lt; accordTitle.length; i++) {
+    accordTitle[i].classList.remove("select-spoller");
+  }
+  for (let i = 0; i &lt; accordContent.length; i++) {
+    accordContent[i].style.height = "0";
+  }
+}
+function showText(textEl) {
+  textEl.style.height = textEl.scrollHeight + "px";
+}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tabs" class="tabs">
+      <div class="tabs__container">
+        <h2 class="tabs__title title">Tabs</h2>
+        <div id="tabs-example" class="tabs__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;ul class="tabs-nav"&gt;
+  &lt;li class="tabs-nav__item"&gt;
+    &lt;button class="tabs-nav__btn tabs-nav__btn--active" data-path="one"&gt;
+      Первый таб
+    &lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li class="tabs-nav__item"&gt;
+    &lt;button class="tabs-nav__btn" data-path="two"&gt;
+      Второй таб
+    &lt;/button&gt;
+  &lt;/li&gt;
+  &lt;li class="tabs-nav__item"&gt;
+    &lt;button class="tabs-nav__btn" data-path="three"&gt;
+      Третий таб
+    &lt;/button&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tabs-content"&gt;
+  <i class="comment">&lt;!-- элементы табов --&gt;</i>
+  &lt;div class="tabs-item tabs-item--active" data-target="one"&gt;
+    Далеко-далеко за словесными горами в стране1.
+  &lt;/div&gt;
+  &lt;div class="tabs-item" data-target="two"&gt;
+    Далеко-далеко за словесными горами в стране2.
+  &lt;/div&gt;
+  &lt;div class="tabs-item" data-target="three"&gt;
+    Далеко-далеко за словесными горами в стране3.
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+.tabs-nav__btn--active {
+  color: tan;
+}
+.tabs-item {
+  display: none;
+}
+.tabs-item--active {
+  display: block;
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+document.querySelectorAll('.tabs-nav__btn').forEach(function(tabsBtn){
+  tabsBtn.addEventListener('click', function(e){
+    const path = e.currentTarget.dataset.path;
+
+    document.querySelectorAll('.tabs-nav__btn').forEach(function(btn){
+      btn.classList.remove('tabs-nav__btn--active')
+    });
+
+    e.currentTarget.classList.add('tabs-nav__btn--active');
+
+    document.querySelectorAll('.tabs-item').forEach(function(tabsItem){
+      tabsItem.classList.remove('tabs-item--active')
+    });
+
+    document.querySelector(`[data-target="${path}"]`).classList.add('tabs-item--active');
+  });
+});
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="dragdrop" class="dragdrop">
+      <div class="dragdrop__container">
+        <h2 class="dragdrop__title title">Drag &amp;&nbsp;Drop №1</h2>
+        <div class="dragdrop__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;div&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-header start"&gt;Начать&lt;/div&gt;
+    &lt;div class="col-header progress"&gt;В процессе&lt;/div&gt;
+    &lt;div class="col-header done"&gt;Готовы&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="row"&gt;
+    &lt;div class="placeholder"&gt;
+      <i class="comment">&lt;!-- элемент перетаскивания --&gt;</i>
+      &lt;div class="item" draggable="true"&gt;Переташи меня&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="placeholder"&gt;&lt;/div&gt;
+    &lt;div class="placeholder"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+.row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header {
+  width: 150px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 5px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
+.item {
+  width: 146px;
+  height: 62px;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 5px;
+  background: #f7f6f7;
+  padding: 0.8rem 1rem;
+  color: #828282;
+  text-align: center;
+  cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 66px;
+  border-radius: 5px;
+  border: 2px dashed #000;
+}
+
+.start {
+  background: linear-gradient(90deg, #ff85e4 0%, #229efd 179.25%);
+}
+
+.progress {
+  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+}
+
+.done {
+  background: linear-gradient(90deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+<i class="comment">/* стилизация перетаскиваемого элемента */</i>
+.hold {
+  background-color: rgba(3, 3, 3, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+<i class="comment">/* удаление, перетаскиваемого элемента из всех ячеек во время перетаскивания */</i>
+.hide {
+  display: none;
+}
+
+<i class="comment">/* стилизация ячейки */</i>
+.hovered {
+  background-color: rgba(220, 220, 220, 1);
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+<i class="comment">// перетаскиваемый элемент</i>
+const item = document.querySelector(".item");
+
+<i class="comment">// ячейки, в одну из которых перетаскивается элемент</i>
+const placeholders = document.querySelectorAll(".placeholder");
+
+item.addEventListener("dragstart", dragstart);
+item.addEventListener("dragend", dragend);
+
+for (const placeholder of placeholders) {
+  <i class="comment">// событие, когда элемент (item) находится над placeholder</i>
+  placeholder.addEventListener("dragover", dragover);
+
+  <i class="comment">// событие, когда элемент (item) заходит на территорию placeholder</i>
+  placeholder.addEventListener("dragenter", dragenter);
+
+  <i class="comment">// событие, когда элемент (item) выходит из территории placeholder</i>
+  placeholder.addEventListener("dragleave", dragleave);
+
+  <i class="comment">// событие, когда элемент (item) отпустили на территории placeholder</i>
+  placeholder.addEventListener("drop", dragdrop);
+}
+
+<i class="comment">// event.target === this</i>
+function dragstart(event) {
+  console.log("drag start", event.target);
+  event.target.classList.add("hold");
+
+  <i class="comment">// пропадает из первой ячейки</i>
+  setTimeout(() =&gt; {
+    event.target.classList.add("hide");
+  }, 0);
+}
+
+function dragend(event) {
+  console.log("drag end", event.target);
+
+  <i class="comment">// переписывает все классы</i>
+  event.target.className = "item";
+}
+
+function dragover(event) {
+  <i class="comment">// console.log("drag over");</i>
+  event.preventDefault();
+}
+
+function dragenter(event) {
+  console.log("drag enter");
+  event.target.classList.add("hovered");
+}
+
+function dragleave(event) {
+  console.log("drag leave");
+  event.target.classList.remove("hovered");
+}
+
+function dragdrop(event) {
+  console.log("drag drop");
+  event.target.classList.remove("hovered");
+  event.target.append(item);
+}
+
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="dragdroptwo" class="dragdroptwo">
+      <div class="dragdroptwo__container">
+        <h2 class="dragdroptwo__title title">Drag &amp;&nbsp;Drop №2</h2>
+        <div class="dragdroptwo__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;div class="block"&gt;
+  &lt;div class="empty"&gt;
+    &lt;div class="fill" draggable="true"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="empty"&gt;&lt;/div&gt;
+  &lt;div class="empty"&gt;&lt;/div&gt;
+  &lt;div class="empty"&gt;&lt;/div&gt;
+  &lt;div class="empty"&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+.block {
+  display: flex;
+}
+
+.empty {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid gray;
+  border-radius: 6px;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  background-color: aquamarine;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.hold {
+  filter: opacity(0.4);
+  border: 2px solid #888;
+  box-shadow: 0px 0px 5px #888;
+}
+
+.hovered {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-style: dashed;
+  border-color: #fff;
+}
+
+@media (max-width: 798.98px) {
+  .block {
+    flex-flow: column nowrap;
+  }
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+const fill = document.querySelector('.fill');
+const emptys = document.querySelectorAll('.empty');
+
+function dragStart() {
+  this.classList.add('hold');
+  setTimeout(() =&gt; {
+    this.className = 'invisible';
+  }, 0);
+}
+
+function dragEnd() {
+  this.classList = 'fill';
+}
+
+function dragEnter(e) {
+  e.preventDefault();
+  this.classList.add('hovered');
+}
+
+function dragLeave() {
+  this.classList.remove('hovered');
+}
+
+function dragOver(e) {
+  e.preventDefault();
+}
+
+function drop(e) {
+  this.classList = 'empty';
+  this.append(fill);
+}
+
+fill.addEventListener('dragstart', dragStart);
+fill.addEventListener('dragend', dragEnd);
+
+for (const empty of emptys) {
+  empty.addEventListener('dragenter', dragEnter);
+  empty.addEventListener('dragleave', dragLeave);
+  empty.addEventListener('dragover', dragOver);
+  empty.addEventListener('drop', drop);
+}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="burger" class="burger">
+      <div class="burger__container">
+        <h2 class="burger__title title">Burger (постоянный)</h2>
+        <div class="accordion-other__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;header id="header" class="header"&gt;
+  &lt;div class="header-container"&gt;
+    &lt;a href="#" class="header__logo" aria-label="логотип"&gt;SSR&lt;/a&gt;
+    &lt;nav id="header-menu" class="header-menu"&gt;
+      &lt;ul class="header-menu-list list"&gt;
+        &lt;li class="header-menu-item"&gt;
+          &lt;a class="header-menu-link link" href="#"&gt;
+            &lt;span&gt;Home&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="header-menu-item"&gt;
+          &lt;a class="header-menu-link link" href="#"&gt;
+            &lt;span&gt;About us&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="header-menu-item"&gt;
+          &lt;a class="header-menu-link link" href="#"&gt;
+            &lt;span&gt;Services&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="header-menu-item"&gt;
+          &lt;a class="header-menu-link link" href="#"&gt;
+            &lt;span&gt;Contacts&lt;/span&gt;
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;div class="header-block-burger"&gt;
+      &lt;button id="header-burger" class="header-burger btn"&gt;
+        &lt;span&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+<i class="comment">/* HEADER */</i>
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(192, 192, 192, 1);
+}
+.header-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header-menu {
+  position: fixed;
+  top: var(--header-height); <i class="comment">/* отступ равняется высоте header */</i>
+  right: 0;
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  background-color: rgba(192, 192, 192, 1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.header-menu.open-menu {
+  transform: none;
+}
+.header-menu-list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  padding: 80px 20px 20px;
+}
+.header-menu-link {
+  position: relative;
+  color: rgba(3, 3, 3, 1);
+  outline: none;
+}
+.header-menu-link span {
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
+}
+.header-menu-link::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  transition: background 0.3s ease-in-out;
+}
+.header-menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 128, 1);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.header-menu-link:focus:not(:hover):not(:active) span {
+  color: rgba(255, 255, 255, 1);
+}
+.header-menu-link:hover:not(:active) span {
+  color: rgba(0, 0, 128, 1);
+}
+.header-menu-link:focus:not(:hover):not(:active)::before {
+  background-color: rgba(0, 0, 128, 1);
+}
+.header-menu-link:hover:not(:active)::after {
+  transform: scaleX(1);
+}
+
+<i class="comment">/* header-burger */</i>
+.header-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  width: 50px;
+  height: 40px;
+  color: #333;
+  transition: border 0.3s ease-in-out;
+}
+.header-burger span {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(51, 51, 51, 1);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.header-burger:hover span {
+  background-color: rgba(0, 0, 128, 1);
+}
+.header-burger:hover span::before {
+  background-color: rgba(0, 0, 128, 1);
+}
+.header-burger:hover span::after {
+  color: rgba(0, 0, 128, 1);
+}
+.header-burger span::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(51, 51, 51, 1);
+  transition: transform 0.3s ease-in-out, left 0.3s ease-in-out,
+    top 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.header-burger span::after {
+  content: "menu";
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  left: 0;
+  font-size: 18px;
+  color: rgba(51, 51, 51, 1);
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.header-burger.open-menu span {
+  transform: rotate(-45deg);
+}
+.header-burger.open-menu span::before {
+  top: -1px;
+  left: 0;
+  width: 100%;
+  transform: rotate(90deg);
+}
+.header-burger.open-menu span::after {
+  opacity: 0;
+  visibility: hidden;
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+"use strict";
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.getElementById("header");
+  <i class="comment">// высота header</i>
+  const headerHeight = header.offsetHeight;
+  <i class="comment">// назначение значения для :root на основе высоты header</i>
+  document.querySelector(":root").style.setProperty("--header-height", `${headerHeight}px`);
+
+  const headerMenu = document.getElementById("header-menu");
+  const headerBurger = document.getElementById("header-burger");
+  const headerMenuLinks = document.querySelectorAll(".header-menu-link");
+
+  function openHeaderMenu() {
+    if (headerBurger.classList.contains("open-menu")) {
+      headerMenu.classList.add("open-menu");
+    } else {
+      headerMenu.classList.remove("open-menu");
+    }
+    headerMenuLinks.forEach(function (el) {
+      el.addEventListener("click", function () {
+        headerBurger.classList.remove("open-menu");
+        headerMenu.classList.remove("open-menu");
+      });
+    });
+    document.addEventListener("click", (element) =&gt; {
+      if (!element.target.closest(".header-burger, .header-menu")) {
+        headerBurger.classList.remove("open-menu");
+        headerMenu.classList.remove("open-menu");
+      }
+    });
+    headerBurger.addEventListener("click", () =&gt; {
+      headerBurger.classList.toggle("open-menu");
+      headerMenu.classList.toggle("open-menu");
+    });
+  }
+  openHeaderMenu();
+});
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="burger-brake" class="burger-brake">
+      <div class="burger-brake__container">
+        <h2 class="burger-brake__title title">Burger (условный)</h2>
+        <div class="burger-brake__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;nav id="nav" class="nav"&gt;
+  &lt;ul class="nav__menu menu"&gt;
+    &lt;li class="menu__item"&gt;
+      &lt;a href="#" class="menu__link"&gt;
+        &lt;span&gt;Home&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="menu__item"&gt;
+      &lt;a href="#" class="menu__link"&gt;
+        &lt;span&gt;About&nbsp;us&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="menu__item"&gt;
+      &lt;a href="#" class="menu__link"&gt;
+        &lt;span&gt;Services&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class="menu__item"&gt;
+      &lt;a href="#" class="menu__link"&gt;
+        &lt;span&gt;Contacts&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;div class="btns"&gt;
+  &lt;button id="burger" class="burger"&gt;
+    &lt;span class="burger__line"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+<i class="comment">/* menu */</i>
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+<i class="comment">/* burger */</i>
+.burger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+.burger__line {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(3, 3, 3, 1);
+  transition: 0.3s;
+}
+.burger__line::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(3, 3, 3, 1);
+  transition-property: top, transform;
+}
+.burger__line::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(3, 3, 3, 1);
+  transition-property: bottom, transform;
+}
+.burger__line::before,
+.burger__line::after {
+  transition-duration: 0.3s, 0.3s; <i class="comment">/* замедление */</i>
+  transition-delay: 0.3s, 0s; <i class="comment">/* задержка замедления */</i>
+}
+
+<i class="comment">/* условие появления бургера и сокрытия меню */</i>
+@media (max-width: 991.98px) {
+  <i class="comment">/* menu */</i>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: all ease 1s;
+    align-items: start;
+    margin: 0;
+    margin-left: -100%;
+    background-color: #fbf0ff;
+    z-index: 9999;
+  }
+  <i class="comment">/* активный класс блока навигации */</i>
+  .nav.show {
+    margin-left: 0;
+  }
+  .menu {
+    flex-flow: column nowrap;
+    align-items: start;
+    padding: 50px 10px 10px;
+  }
+  <i class="comment">/* burger */</i>
+  .burger {
+    display: flex;
+    position: relative;
+    z-index: 10000;
+  }
+  <i class="comment">/* активный класс бургера */</i>
+  .burger.is-active .burger__line {
+    background: transparent;
+  }
+  .burger.is-active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  .burger.is-active span::after {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  .burger.is-active .burger__line::before,
+  .burger.is-active .burger__line::after {
+    transition-delay: 0s, 0.3s;
+  }
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+document.getElementById("burger").addEventListener("click", function (e) {
+  e.preventDefault(); <i class="comment">// остановка распространения события</i>
+  <i class="comment">// this.classList.toggle('is-active');</i>
+  if (this.classList.contains("is-active")) {
+    <i class="comment">// если кнопка menu содержит класс is-active</i>
+    this.classList.remove("is-active");
+    document.getElementById("nav").classList.remove("show"); <i class="comment">// закрытие меню</i>
+  } else {
+    <i class="comment">// если кнопка burger НЕ содержит класс is-active</i>
+    this.classList.add("is-active");
+    document.getElementById("nav").classList.add("show"); <i class="comment">// открытие меню</i>
+  }
+});
+document.addEventListener("click", (element) =&gt; {
+  if (!element.target.closest(".burger, .menu")) {
+    document.getElementById("burger").classList.remove("is-active");
+    document.getElementById("nav").classList.remove("show");
+  }
+});
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="bodylock" class="bodylock">
+      <div class="bodylock__container">
+        <h2 class="bodylock__title title">bodyLock</h2>
+        <div class="bodylock__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;body&gt;
+  &lt;div id="wrapper" class="wrapper"&gt;
+    <i class="comment">// контент</i>
+  &lt;/div&gt;
+&lt;/body&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+body.lock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+const body = document.body;
+const wrapper = body.getElementById("wrapper");
+const lockPadding = document.querySelectorAll(".lock-padding"),
+
+const timeout = 300;
+
+function bodyLock() {
+
+  <i class="comment">// В этой строке кода создается константа t, которая содержит значение разницы между шириной окна браузера </i>
+  <i class="comment">// и шириной обертки (wrapper) модального окна.</i>
+  const t = window.innerWidth - wrapper.offsetWidth + "px";
+
+  <i class="comment">// scrollY присваивает текущее значение вертикального смещения окна браузера (прокрутки) переменной e</i>
+  <i class="comment">// и будет содержать числовое значение</i>
+  let e = window.scrollY;
+
+  <i class="comment">// Далее идёт условие, проверяющее, если в массиве lockPadding есть элементы.</i>
+  if (lockPadding.lenght &gt; 0)
+
+  <i class="comment">// Если массив lockPadding содержит элементы, выполняется цикл перебора каждого элемента массива lockPadding.</i>
+  <i class="comment">// В этом цикле добавляется стиль padding-right с значением t для каждого элемента.</i>
+    for (let e = 0; e &lt; lockPadding.lenght; e++) {
+      lockPadding[e].style.paddingRight = t;
+    }
+  <i class="comment">// Здесь задается стиль padding-right для тела (body) с использованием значения t.</i>
+  (body.style.paddingRight = t),
+
+  <i class="comment">// Эта строка кода добавляет класс 'lock' к элементу тела (body),</i>
+  <i class="comment">// что может использоваться для применения стилей или изменения поведения страницы.</i>
+    body.classList.add("lock"),
+
+    <i class="comment">// В атрибуте data-position для элемента тела (body) устанавливается значение e,</i>
+    <i class="comment">// которое представляет текущее вертикальное смещение (прокрутку) окна браузера.</i>
+    (body.dataset.position = e),
+
+    <i class="comment">// Здесь устанавливается стиль top для элемента тела (body) с использованием отрицательного значения e,</i>
+    <i class="comment">// чтобы сместить его вверх на величину текущей прокрутки страницы.</i>
+    (body.style.top = -e + "px");
+}
+
+
+
+function bodyUnLock() {
+
+  <i class="comment">// плавное отключение блокировки</i>
+  setTimeout(function () {
+
+    <i class="comment">// Создается переменная t, в которой сохраняется значение атрибута data-position тела (body).</i>
+    <i class="comment">// Значение преобразуется в целое число с помощью parseInt().</i>
+    let t = parseInt(body.dataset.position, 10);
+
+    <i class="comment">// Здесь сбрасывается стиль top, чтобы вернуть его в исходное состояние.</i>
+    if (((body.style.top = "auto"), lockPadding.lenght &gt; 0))
+
+      <i class="comment">// Если в массиве lockPadding есть элементы, происходит цикл,</i>
+      <i class="comment">// который восстанавливает стиль padding-right для каждого элемента, устанавливая его значение равным "0px".</i>
+      for (let t = 0; t &lt; lockPadding.lenght; t++) {
+        lockPadding[t].style.paddingRight = "0px";
+      }
+    <i class="comment">// сброс padding-right у body</i>
+    (body.style.paddingRight = "0px"),
+
+      <i class="comment">// удаление класса lock у body</i>
+      body.classList.remove("lock"),
+
+      <i class="comment">// Этот код выполняет прокрутку окна браузера к указанной вертикальной позиции t,</i>
+      <i class="comment">// чтобы вернуть его в исходную позицию прокрутки.</i>
+      <i class="comment">// Объект { top: t, left: 0 } передается в метод scroll объекта window для выполнения прокрутки.</i>
+      window.scroll({ top: t, left: 0 }),
+
+      <i class="comment">// удаление атрибута</i>
+      body.removeAttribute("data-position");
+  }, timeout);
+}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>    
+    <section id="dialog" class="modal-dialog">
+      <div class="modal-dialog__container">
+        <h2 class="modal-dialog__title title">Модальное окно (dialog)</h2>
+        <div class="modal-dialog__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;button id="modal-btn" class="modal__btn btn"&gt;Открыть форму&lt;/button&gt;
+
+&lt;dialog id="modal"&gt;
+  &lt;form class="modal__form"&gt;
+    &lt;h2 class="modal__title title"&gt;Форма отправки&lt;/h2&gt;
+    &lt;input type="text" class="modal-form__input input" name="surname" placeholder="Фамилия" /&gt;
+    &lt;input type="text" class="modal-form__input input" name="name" placeholder="Имя" /&gt;
+    &lt;button class="modal-form__btn btn" type="submit"&gt;
+      Отправить
+    &lt;/button&gt;
+    &lt;button class="modal-form__close btn"&gt;X&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/dialog&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+dialog {
+  padding: 0;
+  border: none;
+}
+
+<i class="comment">/* modal */</i>
+.modal__form {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+<i class="comment">// блокировка скролла окна</i>
+const body = document.body;
+const lockPadding = document.querySelectorAll('.lock-padding');
+const timeout = 300;
+
+function bodyLock() {
+  const t = window.innerWidth - wrapper.offsetWidth + 'px';
+  let e = window.scrollY;
+  if (lockPadding.lenght &gt; 0)
+    for (let e = 0; e &lt; lockPadding.lenght; e++) {
+      lockPadding[e].style.paddingRight = t;
+    }
+  (body.style.paddingRight = t),
+    body.classList.add('lock'),
+    (body.dataset.position = e),
+    (body.style.top = -e + 'px');
+}
+
+function bodyUnLock() {
+  setTimeout(function () {
+    let t = parseInt(body.dataset.position, 10);
+    if (((body.style.top = 'auto'), lockPadding.lenght &gt; 0))
+      for (let t = 0; t &lt; lockPadding.lenght; t++) {
+        lockPadding[t].style.paddingRight = '0px';
+      }
+    (body.style.paddingRight = '0px'),
+      body.classList.remove('lock'),
+      window.scroll({ top: t, left: 0 }),
+      body.removeAttribute('data-position');
+  }, 300);
+}
+
+<i class="comment">// модальное окно</i>
+const modalBtn = document.getElementById('modal-btn');
+const modal = document.getElementById('modal');
+const modalCloseBtn = modal.querySelector('.modal-form__close');
+
+modalBtn.addEventListener('click', () =&gt; {
+  modal.showModal();
+  bodyLock();
+});
+
+modalCloseBtn.addEventListener("click", (e) =&gt; {
+  e.preventDefault();
+  modal.close();
+  bodyUnLock();
+});
+
+<i class="comment">// Функция принимает объект события (в данном случае, объект события клика) в качестве аргумента</i>
+<i class="comment">// и деструктурирует из него два свойства: currentTarget и target</i>
+const handleModalClick = ({ currentTarget, target }) =&gt; {
+
+  <i class="comment">// Проверка: является ли элемент, на котором произошел клик (target), тем же элементом,</i>
+  <i class="comment">// на который был назначен обработчик события (currentTarget).</i>
+  const _isClickedOnBackdrop = target === currentTarget;
+
+  <i class="comment">// Проверка true или false</i>
+  if (_isClickedOnBackdrop) {
+
+    <i class="comment">// При true модальное окно закрывается.</i>
+    currentTarget.close();
+
+    <i class="comment">// Скролл разблокировывается.</i>
+    bodyUnLock();
+  }
+};
+
+modal.addEventListener('click', handleModalClick);
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="modal" class="modal">
+      <div class="modal__container">
+        <h2 class="modal__title title">Модальное&nbsp;окно (html, css, js)</h2>
+        <div class="modal__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;div class="button"&gt;
+  &lt;a href="#" id="open-pop-up" class="open-pop-up"&gt;POP-UP&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id="pop-up" class="pop-up"&gt;
+  &lt;div class="pop-up__container"&gt;
+    &lt;div id="pop-up__body" class="pop-up__body"&gt;
+      &lt;h1 class="pop-up__title title"&gt;Наши&nbsp;услуги&lt;/h1&gt;
+      &lt;p class="pop-up__text text"&gt;
+        Далеко-далеко за словесными горами в стране гласных, и согласных
+        живут рыбные тексты. Имени ему агентство, себя прямо скатился
+        лучше запятых составитель мир раз. Семь, свой. Живет использовало
+        речью океана своих, большой точках?
+      &lt;/p&gt;
+      &lt;div id="pop-up__close" class="pop-up__close"&gt;&#10006&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+<i class="comment">/* блокировка скролла окна */</i>
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+body.lock {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+<i class="comment">/* стилизация модального окна */</i>
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-44.5%) scale(0);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.pop-up.active {
+  transform: translateY(0%) scale(100%);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.pop-up__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.pop-up__body {
+  position: relative;
+  padding: 20px;
+  margin: auto;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+.pop-up__title {
+  margin-bottom: 1rem;
+}
+.pop-up__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+const body = document.body;
+const wrapper = document.getElementById("wrapper");
+const lockPadding = document.querySelectorAll(".lock-padding");
+
+const timeout = 300;
+
+function bodyLock() {
+const t = window.innerWidth - wrapper.offsetWidth + "px";
+let e = window.scrollY;
+if (lockPadding.lenght &gt; 0)
+for (let e = 0; e &lt; lockPadding.lenght; e++) {
+  lockPadding[e].style.paddingRight = t;
+}
+(body.style.paddingRight = t),
+  body.classList.add("lock"),
+  (body.dataset.position = e),
+  (body.style.top = -e + "px");
+}
+
+function bodyUnLock() {
+  setTimeout(function () {
+    let t = parseInt(body.dataset.position, 10);
+    if (((body.style.top = "auto"), lockPadding.lenght &gt; 0))
+      for (let t = 0; t &lt; lockPadding.lenght; t++) {
+        lockPadding[t].style.paddingRight = "0px";
+      }
+    (body.style.paddingRight = "0px"),
+      body.classList.remove("lock"),
+      window.scroll({ top: t, left: 0 }),
+      body.removeAttribute("data-position");
+  }, timeout);
+}
+
+const openPopUp = document.getElementById('open-pop-up');
+const closePopUp = document.getElementById('pop-up__close');
+const popUp = document.getElementById('pop-up');
+
+openPopUp.addEventListener('click', function (e) {
+  e.preventDefault();
+  popUp.classList.add('active');
+  bodyLock();
+});
+
+closePopUp.addEventListener('click', () =&gt; {
+  popUp.classList.remove('active');
+  bodyUnLock();
+});
+document.addEventListener('click', function (event) {
+  if (!event.target.closest('.pop-up__body, .button, #open-pop-up')) {
+    popUp.classList.remove('active');
+    bodyUnLock();
+  }
+});
+
+<i class="comment">// Функция, которая будет вызываться при нажатии клавиши Esc</i>
+function closeModal(event) {
+  if (event.key === 'Escape') {
+    // Закрываем модальное окно
+    popUp.classList.remove('active');
+    bodyUnLock();
+  }
+}
+
+<i class="comment">// Назначаем обработчик события на нажатие клавиши</i>
+document.addEventListener('keydown', closeModal);
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+	<section id="backdrop" class="backdrop">
+      <div class="backdrop__container">
+        <h2 class="backdrop__title title">Закрытие при клике по фону (backdrop)</h2>
+        <div class="backdrop__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;button class="open"&gt;Открыть модальное окно&lt;/button&gt;
+
+&lt;div id="modal" class="modal"&gt;
+  &lt;form class="modal-form"&gt;
+  &lt;h2 class="modal-title"&gt;Форма для заполнения&lt;/h2&gt;
+    &lt;input type="text" class="modal-input" placeholder="Фамилия"&gt;
+    &lt;input type="text" class="modal-input" placeholder="Имя"&gt;
+    &lt;input type="email" class="modal-input" placeholder="E-mail"&gt;
+    &lt;button class="modal-btn" type="submit"&gt;Отправить&lt;/button&gt;
+    &lt;button class="modal-close" type="button"&gt;X&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+.show {
+  display: flex;
+}
+.modal-form {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 10px;
+  background-color: #fff;
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+const modal = document.getElementById('modal');
+const btn = document.querySelector(".open");
+const close = document.querySelector(".modal-close");
+
+btn.addEventListener("click", function(){
+  modal.classList.add("show");
+});
+
+close.addEventListener("click", function(e){
+  e.preventDefault();
+  modal.classList.remove("show");
+});
+
+<i class="comment">// функция закрытия модального окна при клике по фону</i>
+const handleModalClick = (event) =&gt; {
+
+  <i class="comment">// modal - фоновая часть модального окна</i>
+
+  <i class="comment">// сравнение event с modal</i>
+  const _isClickedOnBackdrop = event.target === modal;
+
+  <i class="comment">// если true - modal закрывается</i>
+  if (_isClickedOnBackdrop) {
+    modal.classList.remove("show");
+  }
+};
+
+modal.addEventListener('click', handleModalClick);
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="tooltip" class="tooltip">
+      <div class="tooltip__container">
+        <h2 class="tooltip__title title">Tooltip</h2>
+        <div class="tooltip__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+&lt;div id="tooltip"&gt;i&lt;/div&gt;
+&lt;div id="tooltip-text"&gt;
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque fuga repudiandae ut magnam distinctio, mollitia officia, dolorem facere dolorum qui deleniti vero sequi necessitatibus amet harum repellendus aliquam dolores odio?
+&lt;/div&gt;
+            </pre>
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+#tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  cursor: pointer;
+}
+#tooltip-text {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+            </pre>
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+const button = document.getElementById("tooltip");
+const tooltip = document.getElementById("tooltip-text");
+
+button.addEventListener("mouseover", showTooltip);
+button.addEventListener("mouseout", hideTooltip);
+
+function showTooltip(){
+  tooltip.style.display = "block";
+}
+
+function hideTooltip(){
+  tooltip.style.display = "none";
+}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="newid" class="newid">
+      <div class="newid__container">
+        <h2 class="newid__title title">New id</h2>
+        <div class="newid__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+            <pre>
+              <code>
+const clients = [
+  { id: 1, name: "Alex" },
+  { id: 2, name: "John" },
+  { id: 3, name: "James" },
+  { id: 4, name: "Kate" },
+  { id: 10, name: "Mary" },
+  { id: 6, name: "Bruce" },
+  { id: 8, name: "Arnold" }
+];
+
+<i class="comment">// функция определяет самое большое число id перебором массива,</i>
+<i class="comment">// к которому функция прибавляет единицу и потом возвращает новый id</i>
+function itemId(arr) {
+  let max = 0;
+  for (let item of arr) {
+    if (item.id &gt; max) max = item.id;
+  }
+  return max + 1;
+}
+console.log(itemId(clients)); <i class="comment">// выводит новый id для нового клиента</i>
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section id="#" class="-------">
+      <div class="-------__container">
+        <h2 class="-------__title title"></h2>
+        <div class="-------__accord accord">
+          <h3 class="accord__title title">HTML<span></span></h3>
+          <div class="accord__content accord-content">
+          </div>
+          <h3 class="accord__title title">CSS<span></span></h3>
+          <div class="accord__content accord-content">
+          </div>
+          <h3 class="accord__title title">JavaScript<span></span></h3>
+          <div class="accord__content accord-content">
+          </div>
+        </div>
+      </div>
+    </section> -->
+  </main>
+</body>
+
+</html>
